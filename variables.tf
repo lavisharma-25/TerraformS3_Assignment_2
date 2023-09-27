@@ -8,14 +8,9 @@ variable "ec2_type" {
   description = "EC2 Instances type"
 }
 
-variable "ec2_tag" {
+variable "ec2_name" {
   type        = list(string)
   description = "Names tag for EC2 resources"
-}
-
-variable "names_tag" {
-  type        = string
-  description = "Names tag for S3"
 }
 
 variable "owners" {
@@ -28,7 +23,7 @@ variable "purps" {
   description = "Resource purpose"
 }
 
-variable "s3_name" {
-  type        = set(string)
+variable "bucket" {
+  type        = map(any)
   description = "Unique name of S3 bucket"
 }
